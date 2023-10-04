@@ -1,0 +1,80 @@
+#header{
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: #C70039;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* make the background image to be able to scroll with the rest of the page */
+#messi{
+  background-image: url("../public/Messi.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+}
+
+#navigation{
+  background-color: black;
+  overflow: hidden;
+}
+
+#navigation ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+#navigation li{
+  display: inline;
+}
+
+#navigation a{
+  display: block;
+  color: #C70039;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  
+}
+
+#navigation a:hover{
+  background-color: black;
+  color: #C70039;
+  font-weight: bold;
+}
+
+#background-container{
+  /* Set the background image */
+  background-image: url('../public/Messi.png');
+
+  /* Set the dimensions of the container (adjust as needed) */
+  width: 100vw;
+  height: 100vh;
+
+  /* Other background properties */
+  background-repeat: no-repeat;
+  background-size: cover; /* Cover the entire container */
+  background-position: center;
+
+  /* Optional: Add padding, margin, etc. for positioning the content */
+  padding: 20px;
+}
+
+#background-container h1{
+  color: #C70039;
+  font-weight: bold;
+  position: center;
+}
+
+footer{
+  background-color: black;
+  color: #C70039;
+}
