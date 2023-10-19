@@ -74,6 +74,28 @@
   position: center;
 }
 
+#background-container p{
+  color:lightgray;
+}
+
+
+#background-container a{
+  max-width: 750px;
+  margin: 0 auto;
+  color:red;
+  font-size: 5rem;
+  margin-right: 20px;
+  transition: 0.3s ease;
+}
+
+#background-container a:last-child {
+  margin-right: 0;  /* Ensures that the last icon doesn't have extra margin on the right */
+}
+
+#background-container a:hover {
+  transform: scale(1.1);  /* Optional: slightly enlarge icon on hover */
+}
+
 footer{
   background-color: black;
   color: #C70039;

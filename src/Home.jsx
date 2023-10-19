@@ -37,7 +37,8 @@ function Home() {
           </ul>
         </nav>
         <div id="background-container">
-          <h1></h1>
+          <h1>Welcome the Real-Time Football Website</h1>
+          <p>This website provide the Results, Leagues, Score Tables, Players of most of the football matches all around the world</p>
         </div>
       </div>
       <footer>
