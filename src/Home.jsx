@@ -4,9 +4,10 @@ import "./League";
 import "./Table";
 import "./Player";
 import "./Contact";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
+
   return (
     <div id="top">
       <div>
@@ -36,11 +37,20 @@ function Home() {
             </li>
           </ul>
         </nav>
-        <div id="background-container">
-          <h1>Welcome the Real-Time Football Website</h1>
-          <p>This website provide the Results, Leagues, Score Tables, Players of most of the football matches all around the world</p>
-        </div>
       </div>
+      <div id="background-container">
+          <div id="welcome">
+            <h1>Welcome the Real-Time Football Website</h1>
+            <p>
+              This website provide the Results, Leagues, Score Tables, Players of most of the football matches all around the world
+            </p>
+            <Link to="/result">
+              <button>
+                  Get Started
+              </button>
+            </Link>
+          </div>
+        </div>
       <footer>
         <p>@2023 REAL-TIME FOOTBALL. Alll right reserved.</p>
       </footer>

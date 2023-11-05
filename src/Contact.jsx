@@ -4,9 +4,9 @@ import "./League";
 import "./Table";
 import "./Player";
 import "./Contact";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faFacebookSquare, faInstagramSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookSquare, faInstagramSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMap } from "@fortawesome/free-solid-svg-icons";
 
 function Contact() {
@@ -41,7 +41,12 @@ function Contact() {
         </nav>
       </div>
       <div id="background-container">
-          <h1>Contact</h1>
+          <div id="contact">
+            <h1>Contact Us</h1>
+            <p>
+              We are welcome to answer all your questions.
+            </p>
+          </div>
           <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwRdqRSCSBjvQJxrwwfHxwzsTfJnGsstcJmZCXcxXCxjCtXPGwRpsRskBDZnJhMWrzHtLrL" target="_blank">
             <FontAwesomeIcon icon={faEnvelope}/>
           </a>
