@@ -4,7 +4,7 @@ import "./League";
 import "./Table";
 import "./Player";
 import "./Contact";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Player() {
   return (
@@ -36,10 +36,10 @@ function Player() {
             </li>
           </ul>
         </nav>
-        <div id="background-container">
+      </div>
+      <div id="background-container">
           <h1></h1>
         </div>
-      </div>
       <footer>
         <p>@2023 REAL-TIME FOOTBALL. Alll right reserved.</p>
       </footer>
