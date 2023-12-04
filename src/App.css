@@ -5,11 +5,12 @@
   color: #911928;
   text-transform: uppercase;
   font-family: "Agency FB", sans-serif;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 #header h1{
   padding: 0px 50px;
+  font-weight: bold;
 }
 
 *{
@@ -74,6 +75,12 @@
   overflow: auto;
 }
 
+#background-container h1{
+  color: lightgray;
+  font-family: "Agency FB", sans-serif;
+  font-size: 50px;
+}
+
 #background-container a{
   max-width: 750px;
   margin: 0 auto;
@@ -90,8 +97,6 @@
 #background-container a:hover {
   transform: scale(1.1);  /* Optional: slightly enlarge icon on hover */
 }
-
-
 
 #welcome {
   margin-top: 150px;
@@ -128,10 +133,103 @@
   background-color: rgba(0, 0, 0, 0.5); /* Add a background color on hover */
 }
 
-#contact h1{
+.result {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #911928;
+  border-bottom: 1px solid #911928;
+}
+
+.result #league-logo {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: lightgray;
+  text-transform: uppercase;
+  font-family: "Agency FB", sans-serif;
+  font-size: 30px;
+}
+
+.result #league-logo img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 10px;
+  width: 100px;
+}
+
+.result #score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: lightgray;
+  text-transform: uppercase;
   font-family: "Agency FB", sans-serif;
   font-size: 50px;
+  padding: 30px 0px;
+}
+
+.result #point {
+  padding: 0px 30px;
+  border: 1px solid #911928;
+  background-color: black;
+  font-weight: bold;
+}
+
+.result #score img {
+  padding: 0px 10px;
+  width: 100px;
+}
+
+.League {
+  display:inline-block;
+  margin-left:0px;
+  overflow-y:hidden;
+  padding: 30px 30px;
+  border: 2px solid #911928;
+  color: lightgray;
+  font-family: "Agency FB", sans-serif;
+  font-size: 20px;
+  background-color: rgba(110, 109, 109, 0.328);
+}
+
+.Table th{
+  padding: 30px 30px;
+  border: 2px solid #911928;
+  color: lightgray;
+  font-family: "Agency FB", sans-serif;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Table td{
+  padding: 30px 30px;
+  border: 2px solid #911928;
+  color: lightgray;
+  font-family: "Agency FB", sans-serif;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Player {
+  display: flex;
+  padding: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #911928;
+  border-bottom: 1px solid #911928;
+  justify-content: space-between;
+}
+
+.Player #info {
+  display: flex;
+  padding: 10px 10px;
+  font-size: 30px;
+  font-family: "Agency FB", sans-serif;
+}
+
+.Player img {
+  margin-right: 20px;
+  width: 300px;
 }
 
 #contact p{

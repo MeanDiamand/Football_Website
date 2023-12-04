@@ -4,9 +4,26 @@ import "./League";
 import "./Table";
 import "./Player";
 import "./Contact";
+import {fetchFixtures} from "./lib/fetch-result";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function Result() {
+const Result = () => {
+  const [fixtures, setFixtures] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await fetchFixtures();
+        setFixtures(result.response); 
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData(); 
+  }, []); 
+  
   return (
     <div id="top">
       <div>
@@ -38,7 +55,21 @@ function Result() {
         </nav>
       </div>
       <div id="background-container">
-          <h1></h1>
+          {fixtures.map((fixture) => (
+            <div className="result" key={fixture.fixture.id}>
+              <div id="league-logo">
+                <img src = {fixture.league.logo}/>
+                {fixture.league.name} <br /> {fixture.fixture.status.elapsed}' {fixture.fixture.status.long}
+              </div>
+              <div id="score">
+                <img src = {fixture.teams.home.logo}/> {fixture.teams.home.name}        
+                <div id="point">
+                  {fixture.goals.home} vs {fixture.goals.away}
+                </div>        
+                {fixture.teams.away.name} <img src = {fixture.teams.away.logo} />
+              </div>
+            </div>
+          ))}
         </div>
       <footer>
         <p>@2023 REAL-TIME FOOTBALL. Alll right reserved.</p>

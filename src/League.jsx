@@ -4,9 +4,26 @@ import "./League";
 import "./Table";
 import "./Player";
 import "./Contact";
+import {fetchLeague} from "./lib/fetch-league";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function League() {
+    const [Leagues, setLeagues] = useState([]);
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const result = await fetchLeague();
+          setLeagues(result.response); 
+        } catch (error) {
+          console.error(error);
+        }
+      };
+  
+      fetchData(); 
+    }, []);
+
   return (
     <div id="top">
       <div>
@@ -38,7 +55,20 @@ function League() {
         </nav>
       </div>
       <div id="background-container">
-          <h1></h1>
+        <h1>
+          These are all the Leagues over the world that this website is covered.
+        </h1>
+        {Leagues.map((leagues) => (
+              <div className="League" key={leagues.league.id}>
+                <img src={leagues.league.logo} /> 
+                <br />
+                Name: {leagues.league.name}
+                <br />
+                Type: {leagues.league.type}
+                <br />
+                Participated Country: {leagues.country.name} 
+              </div>
+            ))}
         </div>
       <footer>
         <p>@2023 REAL-TIME FOOTBALL. Alll right reserved.</p>
